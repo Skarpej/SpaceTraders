@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { json, redirect } from '@remix-run/data';
+import { json, redirect } from '@remix-run/node';
 import { registerUser } from "../lib/account/login";
-
+import Login from "../components/Login/Login";
+import Header from "../components/Header/Header";
 export const meta = () => {
     return [
         { title: "Spicy Traders" },
@@ -11,28 +12,20 @@ export const meta = () => {
 
 export let action = async ({ request }) => {
     const formData = new URLSearchParams(await request.text());
-
     const username = formData.get('username');
-
     try {
-        const user = await registerUser(password);
+        const user = await registerUser(username);
         return redirect('/mainPage');
     } catch (error) {
-        console.error('User registration failed:', error);
         return json({ message: 'Registration failed. Please try again.' }, { status: 400 });
     }
 };
 
-export default function Index() {
-    const [user, setUser] = useState('');
+export default function login() {
     return (
-        <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-            <form method="post" action="/signup">
-                <p>Create a new Corporation</p>
-                <input name="username" required maxLength={15} type='text' onChange={e => setUser(e.target.value)} />
-                <button type="submit">Register</button>
-            </form>
-
+        <div>
+            <Header />
+            <Login />
         </div>
     );
 }

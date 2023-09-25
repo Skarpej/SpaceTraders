@@ -2,8 +2,8 @@ import { useState } from "react";
 
 export const meta = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+      { title: "Spicy Traders" },
+      { name: "description", content: "Welcome to Spicy Traders!" },
   ];
 };
 

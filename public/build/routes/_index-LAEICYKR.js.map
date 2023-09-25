@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:routes/_index.jsx?browser", "../../../app/routes/_index.jsx"],
+  "sourcesContent": ["export { default, meta } from \"./routes/_index.jsx\";", "import { useState } from \"react\";\n\nexport const meta = () => {\n  return [\n      { title: \"Spicy Traders\" },\n      { name: \"description\", content: \"Welcome to Spicy Traders!\" },\n  ];\n};\n\nexport default function Index() {\n  const [user, setUser] = useState('');\n  return (\n    <div style={{ fontFamily: \"system-ui, sans-serif\", lineHeight: \"1.8\" }}>\n      <p>Main Page</p>\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;ACAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAyB;AAanB;AAXC,IAAM,OAAO,MAAM;AACxB,SAAO;AAAA,IACH,EAAE,OAAO,gBAAgB;AAAA,IACzB,EAAE,MAAM,eAAe,SAAS,4BAA4B;AAAA,EAChE;AACF;AAEe,SAAR,QAAyB;AAC9B,QAAM,CAAC,MAAM,OAAO,QAAI,uBAAS,EAAE;AACnC,SACE,mDAAC,SAAI,OAAO,EAAE,YAAY,yBAAyB,YAAY,MAAM,GACnE,6DAAC,OAAE,yBAAH;AAAA;AAAA;AAAA;AAAA,SAAY,KADd;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}
